@@ -8,7 +8,7 @@ const { test, skip } = QUnit;
 test('addExclamationPoints should return a string with 3 exclamation points added to the end', (expect) => {
     const expected0 = 'puppy!!!';
     const expected1 = 'chocolate!!!';
-    const expected2 = 'hooray!!!'
+    const expected2 = 'hooray!!!';
 
     const actual0 = addExclamationPoints('puppy');
     const actual1 = addExclamationPoints('chocolate');
@@ -50,9 +50,9 @@ test('multiplyBy12ThenHalve should multiply a number by 12 and then divide the r
 });
 
 test('divideThenMultiply should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
-    const expected0 = 10 // 8 4 5
-    const expected1 = 0 // 0 2 4
-    const expected2 = -300 // -6 -2 -100
+    const expected0 = 10; // 8 4 5
+    const expected1 = 0; // 0 2 4
+    const expected2 = -300; // -6 -2 -100
 
     const actual0 = divideThenMultiply(8, 4, 5);
     const actual1 = divideThenMultiply(0, 2, 4);
@@ -115,11 +115,11 @@ test('getSecondItem should take an array and return the second item in the array
     const actual2 = getSecondItem(['only has one element']);
 
     expect.equal(actual0, expected0, 'input of [1, 2, 3] should return 2');
-    expect.equal(actual1, expected1, "input of ['zebra', 'hippo', 'elephant'] should return 'hippo'");
-    expect.equal(actual2, expected2, "input with no second element should return undefined");
+    expect.equal(actual1, expected1, 'input of [\'zebra\', \'hippo\', \'elephant\'] should return \'hippo\'');
+    expect.equal(actual2, expected2, 'input with no second element should return undefined');
 });
 
-test("getLastItem should take an array and return the LAST item in the array, no matter the array's length", (expect) => {
+test('getLastItem should take an array and return the LAST item in the array, no matter the array\'s length', (expect) => {
     const expected0 = 2;
     const expected1 = 'hippo';
     const expected2 = undefined;
@@ -129,13 +129,13 @@ test("getLastItem should take an array and return the LAST item in the array, no
     const actual2 = getLastItem([]); //empty array
 
     expect.equal(actual0, expected0, 'input of [1, 2, 3, 2] should return 2');
-    expect.equal(actual1, expected1, "input of ['zebra', 'hippo', 'elephant'] should return 'hippo'");
-    expect.equal(actual2, expected2, "input with no second element should return undefined");
-})
+    expect.equal(actual1, expected1, 'input of [\'zebra\', \'hippo\'] should return \'hippo\'');
+    expect.equal(actual2, expected2, 'input with no second element should return undefined');
+});
 
-test("getRandomNumber should return a random number between 0 and 5.", (expect) => {
+test('getRandomNumber should return a random number between 0 and 5.', (expect) => {
     const expected0 = true;
     const actual0 =  getRandomNumber();
 
     expect.equal(((typeof actual0 === 'number') && (actual0 >= 0 && actual0 <= 5)), expected0, 'Number returned is a number and is zero or greater and is 5 or less');
-})
+});

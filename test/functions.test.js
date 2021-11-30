@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { 
+import {
     addExclamationPoints, multiplyBySeven, multiplyBy12ThenHalve, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, getLastItem, getRandomNumber
 } from '../functions.js';
 
@@ -113,12 +113,29 @@ test('getSecondItem should take an array and return the second item in the array
     const actual0 = getSecondItem([1, 2, 3]);
     const actual1 = getSecondItem(['zebra', 'hippo', 'elephant']);
     const actual2 = getSecondItem(['only has one element']);
-    
+
     expect.equal(actual0, expected0, 'input of [1, 2, 3] should return 2');
     expect.equal(actual1, expected1, "input of ['zebra', 'hippo', 'elephant'] should return 'hippo'");
     expect.equal(actual2, expected2, "input with no second element should return undefined");
 });
 
-// const expected1 = true;
-// const actual1 = function();
-// expect.equal(((typeof actual1 === 'number') && (actual1 >= 0 && actual1 <= 5)), expected1, 'Number returned is a number and is zero or greater and is 5 or less');
+test("getLastItem should take an array and return the LAST item in the array, no matter the array's length", (expect) => {
+    const expected0 = 2;
+    const expected1 = 'hippo';
+    const expected2 = undefined;
+
+    const actual0 = getLastItem([1, 2, 3, 2]);
+    const actual1 = getLastItem(['zebra', 'hippo']);
+    const actual2 = getLastItem([]); //empty array
+
+    expect.equal(actual0, expected0, 'input of [1, 2, 3, 2] should return 2');
+    expect.equal(actual1, expected1, "input of ['zebra', 'hippo', 'elephant'] should return 'hippo'");
+    expect.equal(actual2, expected2, "input with no second element should return undefined");
+})
+
+test("getRandomNumber should return a random number between 0 and 5.", (expect) => {
+    const expected0 = true;
+    const actual0 =  getRandomNumber();
+
+    expect.equal(((typeof actual0 === 'number') && (actual0 >= 0 && actual0 <= 5)), expected0, 'Number returned is a number and is zero or greater and is 5 or less');
+})

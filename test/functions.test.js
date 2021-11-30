@@ -89,4 +89,36 @@ test('returnAsAString should take in three numbers and return those numbers mush
     expect.equal(actual0, expected0, 'input of (1, 2, 3) should return "123"');
     expect.equal(actual1, expected1, 'input of (-1, -2, -3) should return "-1-2-3"');
     expect.equal(actual2, expected2, 'input of (1000, 1100, 1001) should return "100011001001');
-})
+});
+
+test('makeLuckyGreeting should take in two numbers and return a greeting announcing that the sum of those numbers is todays lucky number', (expect) => {
+    const expected0 = 'Hello! Your lucky number for the day is 12.';
+    const expected1 = 'Hello! Your lucky number for the day is 5011.';
+    const expected2 = 'Hello! Your lucky number for the day is 10.';
+
+    const actual0 = makeLuckyGreeting(1, 2);
+    const actual1 = makeLuckyGreeting(50, 11);
+    const actual2 = makeLuckyGreeting(1, 0);
+
+    expect.equal(actual0, expected0, 'input of (1, 2) should return "Hello! Your lucky number for the day is 12."');
+    expect.equal(actual1, expected1, 'input of (50, 11) should return "Hello! Your lucky number for the day is 5011."');
+    expect.equal(actual2, expected2, 'input of (1, 0) should return "Hello! Your lucky number for the day is 10."');
+});
+
+test('getSecondItem should take an array and return the second item in the array', (expect) => {
+    const expected0 = 2;
+    const expected1 = 'hippo';
+    const expected2 = undefined;
+
+    const actual0 = getSecondItem([1, 2, 3]);
+    const actual1 = getSecondItem(['zebra', 'hippo', 'elephant']);
+    const actual2 = getSecondItem(['only has one element']);
+    
+    expect.equal(actual0, expected0, 'input of [1, 2, 3] should return 2');
+    expect.equal(actual1, expected1, "input of ['zebra', 'hippo', 'elephant'] should return 'hippo'");
+    expect.equal(actual2, expected2, "input with no second element should return undefined");
+});
+
+// const expected1 = true;
+// const actual1 = function();
+// expect.equal(((typeof actual1 === 'number') && (actual1 >= 0 && actual1 <= 5)), expected1, 'Number returned is a number and is zero or greater and is 5 or less');

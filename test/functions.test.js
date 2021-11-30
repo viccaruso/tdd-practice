@@ -75,4 +75,18 @@ test('returnAsAnArray should take in three numbers and return those numbers in a
     expect.deepEqual(actual0, expected0, 'input of (8, 4, 5) should return array of [8, 4, 5]');
     expect.deepEqual(actual1, expected1, 'input of (1, 2, 3) should return array of [1, 2, 3]');
     expect.deepEqual(actual2, expected2, 'input of (10, 50, 20) should return array of [10, 50, 20]');
+});
+
+test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected0 = '123';
+    const expected1 = '-1-2-3';
+    const expected2 = '100011001001';
+
+    const actual0 = returnAsAString(1, 2, 3);
+    const actual1 = returnAsAString(-1, -2, -3);
+    const actual2 = returnAsAString(1000, 1100, 1001);
+
+    expect.equal(actual0, expected0, 'input of (1, 2, 3) should return "123"');
+    expect.equal(actual1, expected1, 'input of (-1, -2, -3) should return "-1-2-3"');
+    expect.equal(actual2, expected2, 'input of (1000, 1100, 1001) should return "100011001001');
 })

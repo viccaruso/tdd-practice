@@ -48,3 +48,31 @@ test('multiplyBy12ThenHalve should multiply a number by 12 and then divide the r
     expect.equal(actual1, expected1, '0 should return 0');
     expect.equal(actual2, expected2, '-10 should return -60');
 });
+
+test('divideThenMultiply should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
+    const expected0 = 10 // 8 4 5
+    const expected1 = 0 // 0 2 4
+    const expected2 = -300 // -6 -2 -100
+
+    const actual0 = divideThenMultiply(8, 4, 5);
+    const actual1 = divideThenMultiply(0, 2, 4);
+    const actual2 = divideThenMultiply(-6, -2, -100);
+
+    expect.equal(actual0, expected0, '8, 4, 5 should return 10');
+    expect.equal(actual1, expected1, '0, 2, 4, should return 0');
+    expect.equal(actual2, expected2, '-6, -2, -100 should return -300');
+});
+
+test('returnAsAnArray should take in three numbers and return those numbers in an array', (expect) => {
+    const expected0 = [8, 4, 5];
+    const expected1 = [1, 2, 3];
+    const expected2 = [10, 50, 20];
+
+    const actual0 = returnAsAnArray(8, 4, 5);
+    const actual1 = returnAsAnArray(1, 2, 3);
+    const actual2 = returnAsAnArray(10, 50, 20);
+
+    expect.deepEqual(actual0, expected0, 'input of (8, 4, 5) should return array of [8, 4, 5]');
+    expect.deepEqual(actual1, expected1, 'input of (1, 2, 3) should return array of [1, 2, 3]');
+    expect.deepEqual(actual2, expected2, 'input of (10, 50, 20) should return array of [10, 50, 20]');
+})

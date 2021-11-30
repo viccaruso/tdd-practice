@@ -17,7 +17,6 @@ export function addExclamationPoints(word) {
 }
 
 // This function should take in a number and multiply it by seven
-
 /* 
 Input:
 
@@ -33,7 +32,6 @@ export function multiplyBySeven(num) {
 }
 
 // This function should take in a number and multiply it by seven then cut the result in half
-
 /* 
 Input:
 
@@ -46,12 +44,11 @@ Output:
 */
 
 export function multiplyBy12ThenHalve(num) {
-    return true;
+    return ((num * 12) / 2);
 }
 
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
-
 /* 
 Input:
 
@@ -63,12 +60,11 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return ((firstNumber / secondNumber) * thirdNumber);
 }
 
 
 // This function should take in three numbers and return those numbers in an array
-
 /* 
 Input:
 
@@ -80,11 +76,10 @@ Output:
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return [firstNumber, secondNumber, thirdNumber];
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
-
 /* 
 Input:
 
@@ -100,7 +95,6 @@ export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
-
 /* 
 Input:
 
@@ -116,7 +110,6 @@ export function makeLuckyGreeting(firstNumber, secondNumber) {
 }
 
 // This function should take an array and return the second item in the array
-
 /* 
 Input:
 
@@ -133,7 +126,6 @@ export function getSecondItem(array) {
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
-
 /* 
 Input:
 

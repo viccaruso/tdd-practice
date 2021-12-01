@@ -135,7 +135,7 @@ test('getLastItem should take an array and return the LAST item in the array, no
 
 test('getRandomNumber should return a random number between 0 and 5.', (expect) => {
     const expected0 = true;
-    const actual0 =  getRandomNumber();
+    const actual0 = getRandomNumber();
 
     expect.equal(((typeof actual0 === 'number') && (actual0 >= 0 && actual0 <= 5)), expected0, 'Number returned is a number and is zero or greater and is 5 or less');
 });
